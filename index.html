@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <title>Huhao.me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="http://lib.sinaapp.com/js/bootstrap/2.0.2/css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+        </style>
+        <link href="http://lib.sinaapp.com/js/bootstrap/2.0.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="static/favicon.ico">
+    </head>
+
+    <body>
+        <script id="tpl-main" type="text/template">
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <a class="brand" href="#">{{site_name}}</a>
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                                {{#navlist}}
+                                <li><a href="{{link}}">{{text}}</a></li>
+                                {{/navlist}}
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class="well sidebar-nav">
+                        </div><!--/.well -->
+                    </div><!--/span-->
+                    <div class="span9">
+                        <div class="row-fluid article-content">
+                        </div><!--/row-->
+                    </div><!--/span-->
+                </div><!--/row-->
+                <hr>
+                <footer>
+                <p>&copy; {{copyright}}</p>
+                </footer>
+            </div><!--/.fluid-container-->
+        </script>
+
+        <script id="tpl-sidebar" type="text/template">
+            <ul class="nav nav-list">
+                {{#months}}
+                <li class="nav-header">{{month}}</li>
+                {{#articles}}
+                <li><a href="#show/{{link}}">{{text}}</a></li>
+                {{/articles}}
+                {{/months}}
+            </ul>
+        </script>
+        <div class="main-body">
+        </div>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.1/backbone-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.3.0/mustache.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.0.1/bootstrap.min.js"></script>
+        <script src="http://cachedcommons.org/cache/showdown/1.0.0/javascripts/showdown-min.js"></script>
+        <script src="main.js"></script>
+    </body>
+    <!-- 为了迎接小天天的到来，本博客程序命名为小天天博客，祝小天天能健康茁壮成长。 huhao@2012-03-24 -->
+</html>
