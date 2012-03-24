@@ -16,7 +16,7 @@ $(function(){
         result.site_name  = data.site_name;
         result.copyright  = data.copyright;
         result.navlist    = _.map(data.cates, function(cate){
-            return {link: '#cate/'+ cate.name, text: cate.text};
+            return {link: '#!cate/'+ cate.name, text: cate.text};
         });
         return result;
     };
@@ -104,7 +104,7 @@ $(function(){
             this.$(".sidebar-nav").empty().append(sidebar_view.render().el);
 
             if(this.cate){
-                this.$('.navbar-inner .nav li a[href="#cate/'+this.cate+'"]').parent().addClass('active');
+                this.$('.navbar-inner .nav li a[href="#!cate/'+this.cate+'"]').parent().addClass('active');
             }
             
             if(this.article){
@@ -117,8 +117,8 @@ $(function(){
     blog.App = Backbone.Router.extend({
         routes: {
             ""              : "index",
-            "cate/:cate"    : "cate",
-            "show/:article" : "show"
+            "!cate/:cate"    : "cate",
+            "!show/:article" : "show"
         },
         make_main_view: function(cate, article){
             if(!this.main){
