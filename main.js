@@ -63,7 +63,7 @@ $(function(){
             var that = this;
             this.article = options.article;
             _.bindAll(this, 'render');
-            $.get('post/'+this.article, function(data){
+            $.get('post/'+this.article+'.txt', function(data){
                 that.model = data;
                 that.render();
             });
@@ -129,10 +129,10 @@ $(function(){
             this.main.render();
         }, 
         index: function(){
-            this.make_main_view(null, 'index.txt');
+            this.make_main_view(null, 'index');
         },
         cate: function(cate){
-            this.make_main_view(cate, 'index.txt');
+            this.make_main_view(cate, 'index');
         },
         show: function(article){
             this.make_main_view(null, article);
