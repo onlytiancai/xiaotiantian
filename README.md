@@ -14,8 +14,8 @@
 * 用Markdown写好博客，命名为yyyy-MM-dd-blog_name.txt，保存在post目录里。
 * git add ,git commit, git push
 
-### Demo
-[蛙蛙王子的蛙蛙池塘](http://huhao.me)
-
+### Demo 
+* [蛙蛙王子的蛙蛙池塘](http://huhao.me)
+* 如果您使用了本程序，可以发邮件给onlytiancai at gmail，我更新到这个列表里。
 
 为了迎接小天天的到来，本博客程序命名为小天天博客，祝小天天能健康茁壮成长。 huhao@2012-03-24
